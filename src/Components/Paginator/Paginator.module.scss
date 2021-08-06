@@ -1,0 +1,39 @@
+@import "../../scss/mixins.scss";
+
+.paginatorWrapper {
+  @include rowCenterFlex();
+  justify-content: center;
+  box-shadow: 0px -0.5px 0px #e0e2e8, 0px 0.5px 0px #e0e2e8;
+  height: 60px;
+}
+
+.pagination {
+  @include rowCenterFlex();
+  justify-content: center;
+  list-style: none;
+  @include blue();
+  font-family: "HelveticaNeueCyr-Medium";
+  font-size: 15px;
+  li {
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  .active {
+    @include rowCenterFlex();
+    justify-content: center;
+    background: #007bff;
+    width: 28px;
+    height: 22px;
+    color: #ffffff;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .pagination {
+    font-size: 11px;
+    li {
+      margin-left: 6px;
+    }
+  }
+}

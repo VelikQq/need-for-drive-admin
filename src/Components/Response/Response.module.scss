@@ -1,0 +1,36 @@
+@import "../../scss/mixins";
+
+.successResponse {
+  width: 80%;
+  @include rowCenterFlex();
+  padding-left: 25px;
+  padding-right: 25px;
+  justify-content: space-between;
+  background-color: #0ec261;
+  height: 42px;
+  position: absolute;
+  top: 69px;
+  right: 0px;
+  @include pageTitle;
+  font-size: 13px;
+  color: #ffffff;
+  .leftSuccessInfo {
+    @include rowCenterFlex();
+    img {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+    }
+  }
+  .rightSuccesInfo {
+    cursor: pointer;
+    img {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.errorResponse {
+  background-color: #c4183c;
+}

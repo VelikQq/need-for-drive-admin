@@ -1,0 +1,19 @@
+@import "../../../scss/mixins";
+
+.buttonWrapper {
+  @include rowCenterFlex();
+  justify-content: center;
+  button {
+    @include rowCenterFlex();
+    justify-content: center;
+    @include btn(95px, 29px, #0ec261, #ffffff);
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .buttonWrapper {
+    button {
+      width: 65px;
+    }
+  }
+}

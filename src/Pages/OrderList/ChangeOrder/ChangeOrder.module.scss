@@ -1,0 +1,87 @@
+@import "../../../scss/mixins";
+
+.changeOrderWrapper {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 2px 0px rgba(90, 97, 105, 0.11),
+    0px 4px 8px rgba(90, 97, 105, 0.12), 0px 10px 10px rgba(90, 97, 105, 0.06),
+    0px 7px 70px rgba(90, 97, 105, 0.1);
+  border-radius: 9px;
+  margin-top: 28px;
+  padding: 16px;
+  margin: 32px auto;
+  max-width: 1100px;
+  .pageTitle {
+    @include pageTitle();
+    font-size: 20px;
+    padding: 10px;
+  }
+  .orderInfoInputs {
+    display: flex;
+    flex-direction: column;
+    max-height: 250px;
+    flex-wrap: wrap;
+  }
+
+  .dataInputField {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.5px solid #becad6;
+    border-radius: 4px;
+    // width: 248px;
+    height: 30px;
+    // margin-left: 5px;
+    input {
+      border: none;
+      outline: none;
+      padding-left: 8px;
+    }
+  }
+  .cleanInputBtn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .orderPrice {
+    @include pageTitle();
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .changeOrderBtnsWrapper {
+    button {
+      cursor: pointer;
+    }
+    .changeOrderBtn {
+      @include btn(95px, 29px, #007bff, #ffffff);
+    }
+    .cancellOrderBtn {
+      @include cancellBtn();
+    }
+  }
+
+  .changeOrderBtnsWrapper {
+    width: 300px;
+    padding: 12px;
+    @include rowCenterFlex();
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .changeOrderWrapper {
+    padding: 2px;
+    .addParams {
+      margin-top: 250px;
+    }
+    .orderInfoInputs {
+      flex-wrap: nowrap;
+    }
+    .changeOrderBtnsWrapper {
+      width: 100%;
+    }
+  }
+}

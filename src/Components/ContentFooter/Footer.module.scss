@@ -1,0 +1,40 @@
+@import "../../scss/mixins.scss";
+
+footer {
+  @include headerAndFooterWrapp();
+  font-size: 14px;
+
+  .footerContainer {
+    @include rowCenterFlex();
+    justify-content: space-between;
+    margin: 0 28px;
+    width: 100%;
+    a {
+      font-family: "HelveticaNeueCyr-Medium";
+      @include blue();
+
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
+    .coopyRightText {
+      font-family: "Roboto-Medium";
+      color: #818ea3;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .coopyRightText {
+    width: 66px;
+  }
+  .footerLinksWrapper {
+    display: flex;
+    flex-direction: column;
+    a {
+      &:first-child {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

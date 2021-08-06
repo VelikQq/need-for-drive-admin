@@ -1,0 +1,90 @@
+.checkBoxWrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  margin-bottom: 24px;
+  position: relative;
+  .checkBoxLabel {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #999999;
+  }
+}
+
+.notActiveLable {
+  color: #999999;
+}
+
+.checkBoxInput {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.checkBoxLabel::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #999999;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.checkBoxLabel::after {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 10px;
+  background-image: url("../../Images/checkBoxSvg.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  z-index: 5;
+}
+
+.checkBoxInput:checked + .checkBoxLabel::before {
+  border-color: #0ec261;
+  color: #0ec261;
+}
+.checkBoxInput:checked + .checkBoxLabel::after {
+  opacity: 1;
+}
+.checkBoxInput:checked + .checkBoxLabel {
+  color: #121212;
+}
+
+.checkBoxInput:hover + .checkBoxLabel::before {
+  border-color: #0ec261;;
+}
+
+@media screen and (max-width: 1024px) {
+  .modelCarChoose {
+    padding: 32px 32px 0px 32px;
+  }
+  .modelCarImagesWrapper {
+    align-items: center;
+    width: 500px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .modelPageContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .checkBoxWrapper {
+    margin-bottom: 8px;
+  }
+}

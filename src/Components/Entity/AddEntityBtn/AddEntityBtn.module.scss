@@ -1,0 +1,15 @@
+@import "../../../scss/mixins";
+
+.buttonWrapper {
+  width: 100%;
+  @include rowCenterFlex();
+  justify-content: flex-end;
+  padding-right: 22px;
+  margin-bottom: 22px;
+  button {
+    @include btn(95px, 29px, #007bff, #ffffff);
+    margin-top: 14px;
+    @include rowCenterFlex();
+    justify-content: center;
+  }
+}

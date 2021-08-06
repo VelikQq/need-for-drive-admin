@@ -1,0 +1,21 @@
+@import "../../scss/mixins";
+
+.selectWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  padding: 12px;
+  label {
+    @include label();
+  }
+  select {
+    background: #ffffff;
+    border: 0.5px solid #becad6;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 11px;
+    @include darkGrey();
+    font-family: "HelveticaNeueCyr-Medium";
+    height: 30px;
+  }
+}

@@ -1,0 +1,235 @@
+@import "../../scss/mixins.scss";
+
+.pageTitle {
+  @include pageTitle();
+}
+
+.ordersWrapper {
+  margin-top: 28px;
+  background: #ffffff;
+  box-shadow: 0px 2px 0px rgba(90, 97, 105, 0.11),
+    0px 4px 8px rgba(90, 97, 105, 0.12), 0px 10px 10px rgba(90, 97, 105, 0.06),
+    0px 7px 70px rgba(90, 97, 105, 0.1);
+  border-radius: 9px;
+
+  .sortParamsWrapper {
+    @include rowCenterFlex();
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0px 20px 0px 20px;
+    box-shadow: 0px -0.5px 0px #e0e2e8, 0px 0.5px 0px #e0e2e8;
+    margin-bottom: 12px;
+    .sortParamsContainer {
+      display: flex;
+      align-items: center;
+    }
+    .selectWrapper {
+      @include selectWrapper();
+      select {
+        @include select();
+      }
+    }
+    button {
+      @include btn(96px, 30px, #007bff, #ffffff);
+    }
+  }
+}
+
+.orderWrapper {
+  @include rowCenterFlex();
+  justify-content: space-around;
+  &:not(:first-child) {
+    margin-bottom: 32px;
+  }
+
+  .orderImgWrapper {
+    width: 138px;
+    height: 64px;
+    // margin-left: 22px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .orderInfoWrapper {
+    // margin-left: 16px;
+    font-family: "Roboto-Medium";
+    font-size: 13px;
+    color: #889098;
+    width: 320px;
+    .textLine {
+      &:not(:first-child) {
+        margin-top: 6px;
+      }
+      span {
+        color: #121212;
+      }
+    }
+  }
+  .extraOrderInfoWrapper {
+    // margin-left: 48px;
+    .extraOrderInfo {
+      @include rowCenterFlex();
+      &:not(:first-child) {
+        margin-top: 6px;
+      }
+      font-family: "Roboto-Medium";
+      font-size: 10px;
+      .iconWrapper {
+        margin-right: 8px;
+      }
+      .activeText {
+        color: #121212;
+      }
+      .disabledText {
+        color: #999999;
+      }
+    }
+  }
+  .orderPrice {
+    // margin-left: 46px;
+    width: 131px;
+    text-align: center;
+    font-family: "HelveticaNeueCyr-Medium";
+    font-size: 24px;
+    color: #121212;
+  }
+
+  .buttonsWrapper {
+    @include rowCenterFlex();
+    // margin-left: 46px;
+    .btnIconWrapper {
+      // width: 12px;
+      // height: 12px;
+      margin-right: 2px;
+      @include rowCenterFlex();
+      justify-content: center;
+    }
+    button {
+      width: 72px;
+      height: 24px;
+      @include rowCenterFlex();
+      padding: 0;
+      background: #ffffff;
+      font-family: "HelveticaNeueCyr-Medium";
+      font-size: 11px;
+      color: #5a6169;
+      justify-content: center;
+      cursor: pointer;
+      &:first-child {
+        border: 0.5px solid #bebed6;
+        box-sizing: border-box;
+        border-radius: 4px 0px 0px 4px;
+      }
+      &:nth-child(2) {
+        border: 0.5px solid #bebed6;
+        box-sizing: border-box;
+      }
+      &:nth-child(3) {
+        border: 0.5px solid #bebed6;
+        box-sizing: border-box;
+        border-radius: 0px 4px 4px 0px;
+      }
+    }
+  }
+}
+
+.noFilteredOrders {
+  @include rowCenterFlex();
+  justify-content: center;
+  font-family: "HelveticaNeueCyr-Medium";
+  font-size: 16px;
+  color: #5a6169;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 1200px) {
+  .ordersWrapper {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ordersWrapper {
+    .sortParamsWrapper {
+      flex-wrap: wrap;
+      align-items: center;
+      height: 100px;
+      margin-bottom: 12px;
+      .sortParamsContainer {
+        flex-wrap: wrap;
+      }
+      .selectWrapper {
+        width: 80px;
+        padding-left: 6px;
+        select {
+          width: 70px;
+        }
+      }
+    }
+  }
+
+  .orderWrapper {
+    .orderPrice {
+      font-size: 20px;
+    }
+    .buttonsWrapper {
+      flex-direction: column;
+      margin-right: 8px;
+      button {
+        border-radius: 4px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  // .pageTitle {
+  //   font-size: 20px;
+  // }
+  .ordersWrapper {
+    // margin-top: 14px;
+    .sortParamsWrapper {
+      flex-wrap: nowrap;
+      height: 82px !important;
+      justify-content: center;
+      padding: 0;
+      .sortParamsContainer {
+        justify-content: space-evenly;
+        width: 200px;
+        .selectWrapper {
+          &:nth-child(3) {
+            margin-top: 12px;
+          }
+          &:nth-child(4) {
+            margin-top: 12px;
+          }
+
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .orderWrapper {
+    .orderInfoWrapper {
+      font-size: 10px;
+    }
+    .orderImgWrapper {
+      display: none;
+    }
+
+    .orderPrice {
+      font-size: 14px;
+    }
+    .extraOrderInfoWrapper {
+      display: none;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

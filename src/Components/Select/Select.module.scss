@@ -1,0 +1,8 @@
+@import "../../scss/mixins.scss";
+
+.selectWrapper {
+  @include selectWrapper();
+  select {
+    @include select();
+  }
+}

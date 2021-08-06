@@ -1,0 +1,13 @@
+@import "../../scss/mixins";
+
+.hide {
+  display: none;
+}
+
+.orderStatusTableWrapper {
+  @include entityScroll();
+}
+
+.changeTableColumn, .deleteTableColumn {
+  width: 60px;
+}

@@ -1,0 +1,13 @@
+.adminPageWrapper {
+  display: flex;
+  // margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+}
+
+// @media screen and (min-width: 1500px) {
+//   .adminPageWrapper {
+//     max-width: 1440px;
+//   }
+// }

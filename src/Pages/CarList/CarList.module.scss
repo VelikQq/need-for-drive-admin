@@ -1,0 +1,102 @@
+@import "../../scss/mixins";
+
+.hideWrapper {
+  display: none;
+}
+
+.carListTitle {
+  @include pageTitle();
+}
+
+.carListTableWrapper {
+  @include entityScroll();
+}
+
+.carListWrapper {
+  max-width: 1062px;
+  background: #ffffff;
+  box-shadow: 0px 2px 0px rgba(90, 97, 105, 0.11),
+    0px 4px 8px rgba(90, 97, 105, 0.12), 0px 10px 10px rgba(90, 97, 105, 0.06),
+    0px 7px 70px rgba(90, 97, 105, 0.1);
+  border-radius: 9px;
+  margin-top: 28px;
+
+  .buttonWrapper {
+    width: 100%;
+    @include rowCenterFlex();
+    justify-content: flex-end;
+    padding-right: 22px;
+  }
+  .buttonWrapper {
+    a {
+      @include btn(95px, 29px, #007bff, #ffffff);
+      margin-top: 14px;
+      @include rowCenterFlex();
+      justify-content: center;
+    }
+  }
+
+  table {
+    padding-left: 22px;
+    padding-right: 22px;
+    width: 100%;
+    margin-top: 14px;
+    font-family: "Roboto-Medium";
+    font-size: 14px;
+    color: #3d5170;
+
+    thead {
+      background-color: #f5f6f8;
+      tr {
+        th {
+          padding: 10px;
+        }
+      }
+    }
+    tbody {
+      text-align: center;
+      margin-top: 8px;
+      tr {
+        // .carName {
+        //   text-align: left;
+        // }
+        .changeCarBtn {
+          @include rowCenterFlex();
+          justify-content: center;
+          a {
+            @include rowCenterFlex();
+            justify-content: center;
+            @include btn(95px, 29px, #0ec261, #ffffff);
+          }
+        }
+        td {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 772px) {
+//   .category {
+//     display: none;
+//   }
+// }
+// @media screen and (max-width: 550px) {
+//   .number {
+//     display: none;
+//   }
+// }
+
+
+
+@media screen and (max-width: 800px) {
+  // table {
+  //   padding-left: 0px !important;
+  //   padding-right: 0px !important;
+  //   font-size: 12px !important;
+  // }
+  // .priceMax {
+  //   display: none;
+  // }
+}

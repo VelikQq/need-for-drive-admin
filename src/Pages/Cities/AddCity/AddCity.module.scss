@@ -1,0 +1,37 @@
+@import "../../../scss/mixins";
+
+.entityFormWrapper {
+  @include entityFormWrapper();
+  form {
+    width: 100%;
+  }
+  .fieldWrapper {
+    @include columnFlex();
+    margin-bottom: 16px;
+    textarea {
+      max-width: 100%;
+    }
+    label {
+      @include label();
+    }
+    .inputField {
+      @include enityInputField;
+    }
+    .inputErrorMsg {
+      @include inputErrorMsg();
+    }
+
+    .inputWithError {
+      @include inputWithError();
+    }
+  }
+  .entityFormBtns {
+    @include entityFormBtns();
+    .addBtn {
+      @include addEntityBtn();
+    }
+    .cancellBtn {
+      @include cancellBtn();
+    }
+  }
+}

@@ -1,0 +1,218 @@
+@mixin columnCenterFlex() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin rowCenterFlex() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin greyBlueText {
+  color: #3d5170;
+}
+
+@mixin darkGrey {
+  color: #495057;
+}
+
+@mixin blue {
+  color: #007bff;
+}
+
+@mixin mainColor {
+  color: #0ec261;
+}
+
+@mixin btn($width, $heigth, $bgColor, $textColor) {
+  width: $width;
+  height: $heigth;
+  background: $bgColor;
+  color: $textColor;
+  cursor: pointer;
+  border: 0.5px solid $bgColor;
+  border-radius: 4px;
+  font-family: "HelveticaNeueCyr-Medium";
+  font-size: 11px;
+  text-align: center;
+  &:hover {
+    filter: brightness(90%);
+  }
+  &:active {
+    filter: brightness(80%);
+  }
+}
+
+@mixin inputErrorMsg {
+  color: #c4183c;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-top: 4px;
+}
+
+@mixin inputWithError {
+  border-color: #c4183c;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    font-family: "HelveticaNeueCyr-Medium";
+    font-size: 13px;
+    color: #767f9d;
+  }
+  ::-moz-placeholder {
+    font-family: "HelveticaNeueCyr-Medium";
+    font-size: 13px;
+    color: #767f9d;
+  } 
+  :-moz-placeholder {
+    font-family: "HelveticaNeueCyr-Medium";
+    font-size: 13px;
+    color: #767f9d;
+  } 
+  :-ms-input-placeholder {
+    font-family: "HelveticaNeueCyr-Medium";
+    font-size: 13px;
+    color: #767f9d;
+  }
+}
+
+@mixin headerAndFooterWrapp {
+  @include rowCenterFlex();
+  height: 68px;
+  background: #ffffff;
+  box-shadow: 0px 2.5px 9.5px rgba(90, 97, 105, 0.12);
+}
+
+@mixin pageTitle {
+  font-family: "HelveticaNeueCyr-Medium";
+  font-size: 29px;
+  color: #3d5170;
+}
+
+@mixin selectWrapper {
+  width: 110px;
+  height: 30px;
+  border: 0.5px solid #bebed6;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+@mixin select {
+  width: 86px;
+  height: 100%;
+  font-family: "HelveticaNeueCyr-Medium";
+  font-size: 11px;
+  color: #868e96;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: url("../Images/selectArrow.svg") no-repeat right center;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+@mixin entityTable {
+  table {
+    padding-left: 22px;
+    padding-right: 22px;
+    width: 100%;
+    font-family: "Roboto-Medium";
+    font-size: 14px;
+    color: #3d5170;
+
+    thead {
+      background-color: #f5f6f8;
+      tr {
+        th {
+          padding: 10px;
+        }
+      }
+    }
+    tbody {
+      text-align: center;
+      margin-top: 8px;
+      tr {
+        .carName {
+          text-align: left;
+        }
+        .changeCarBtn {
+          @include rowCenterFlex();
+          justify-content: flex-end;
+          a {
+            @include rowCenterFlex();
+            justify-content: center;
+            @include btn(95px, 29px, #0ec261, #ffffff);
+          }
+        }
+        td {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin columnFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin entityScroll {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+@mixin entityFormWrapper {
+  @include rowCenterFlex();
+  justify-content: center;
+  width: 270px;
+  min-height: 200px;
+  margin: 0 auto;
+  box-shadow: 0px 1px 0px rgba(90, 97, 105, 0.11),
+    0px 2px 4px rgba(90, 97, 105, 0.12), 0px 5px 5px rgba(90, 97, 105, 0.06),
+    0px 3.5px 35px rgba(90, 97, 105, 0.1);
+  border-radius: 9px;
+  padding: 12px;
+}
+
+@mixin label {
+  margin-bottom: 8px;
+  font-family: "HelveticaNeueCyr-Medium";
+  color: #3d5170;
+}
+
+@mixin enityInputField {
+  height: 30px;
+  background: #ffffff;
+  border: 0.5px solid #becad6;
+  border-radius: 3px;
+  padding-left: 10px;
+  font-size: 11px;
+  @include darkGrey();
+  font-family: "HelveticaNeueCyr-Medium";
+}
+
+@mixin entityFormBtns {
+  width: 100%;
+  @include rowCenterFlex();
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+@mixin addEntityBtn {
+  @include btn(110px, 29px, #007bff, #ffffff);
+}
+
+@mixin cancellBtn {
+  @include btn(110px, 29px, #e9ecef, #3d5170);
+}

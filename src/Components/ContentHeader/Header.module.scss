@@ -1,0 +1,102 @@
+@import "../../scss/mixins.scss";
+
+header {
+  @include headerAndFooterWrapp();
+
+  .searchWrapper {
+    @include rowCenterFlex();
+    width: 74%;
+    height: 100%;
+    .linzaIconWrapper {
+      width: 15px;
+      height: 14px;
+      margin-left: 28px;
+      margin-right: 10px;
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+
+  .notificationWrapper {
+    position: relative;
+    @include rowCenterFlex();
+    justify-content: center;
+    width: 70px;
+    box-shadow: 0.5px 0px 0px #cacedb, -0.5px 0px 0px #cacedb;
+    height: 100%;
+    .countNotification {
+      position: absolute;
+      top: 36px;
+      left: 54%;
+    }
+  }
+
+  .adminBlockWrapper {
+    @include rowCenterFlex();
+    cursor: pointer;
+    height: 100%;
+    &:hover {
+      background: #e5e5e5;
+    }
+    position: relative;
+    .logOutWrapper {
+      position: absolute;
+      @include rowCenterFlex();
+      justify-content: center;
+      top: 72px;
+      // left: 62px;
+      box-shadow: 0px 2px 0px rgba(90, 97, 105, 0.11),
+        0px 4px 8px rgba(90, 97, 105, 0.12),
+        0px 10px 10px rgba(90, 97, 105, 0.06),
+        0px 7px 70px rgba(90, 97, 105, 0.1);
+      width: 193px;
+      height: 40px;
+      button {
+        @include btn(110px, 29px, #007bff, #ffffff);
+      }
+    }
+    .adminAvatar {
+      margin-left: 26px;
+    }
+    .adminName {
+      font-family: "HelveticaNeueCyr-Medium";
+      color: #5a6169;
+      font-size: 15px;
+      width: 70px;
+      margin-left: 14px;
+      margin-right: 26px;
+    }
+    .adminArrow {
+      margin-right: 8px;
+    }
+  }
+
+  @include placeholder();
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    height: 54px;
+
+    .countNotification {
+      top: 32px !important;
+    }
+    .logOutWrapper {
+      top: 52px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  header {
+    .searchWrapper {
+      .linzaIconWrapper {
+        margin-left: 7px;
+        margin-right: 0px;
+      }
+    }
+  }
+}

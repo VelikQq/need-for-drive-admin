@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "HelveticaNeueCyr-Medium";
+  src: local("Helvetiva"),
+    url(./Fonts/HeleveticaNeue/HelveticaNeueCyr-Medium.woff2) format("woff2"),
+    url(./Fonts/HeleveticaNeue/HelveticaNeueCyr-Medium.woff) format("woff");
+  /* src: url(./Fonts/HeleveticaNeue/HelveticaNeueCyr-Medium.ttf); */
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(./Fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(./Fonts/Roboto/Roboto-Light.ttf);
+}

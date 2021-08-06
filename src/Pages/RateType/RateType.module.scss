@@ -1,0 +1,17 @@
+@import "../../scss/mixins";
+
+.rateTypeTableWrapper {
+  @include entityScroll();
+}
+
+.hide {
+  display: none;
+}
+
+.changeTableColumn {
+  width: 60px;
+}
+
+.deleteTableColumn {
+  width: 60px;
+}
